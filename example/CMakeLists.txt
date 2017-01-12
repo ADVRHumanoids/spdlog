@@ -35,13 +35,13 @@ endif()
 find_package(Threads)
 
 add_executable(example example.cpp)
-target_link_libraries(example spdlog::spdlog ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(example ${CMAKE_THREAD_LIBS_INIT})
 
 add_executable(benchmark bench.cpp)
-target_link_libraries(benchmark spdlog::spdlog ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(benchmark ${CMAKE_THREAD_LIBS_INIT})
 
 add_executable(multisink multisink.cpp)
-target_link_libraries(multisink spdlog::spdlog ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(multisink ${CMAKE_THREAD_LIBS_INIT})
 
 enable_testing()
 file(MAKE_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/logs")
